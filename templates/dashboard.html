@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>📊 Sales Performance (Last 28 Days)</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Total Sales</h2>
+        <p>$ {{ total_sales }}</p>
+      </div>
+
+      <div class="card">
+        <h2>Top Product</h2>
+        <p>{{ top_product }}</p>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>Monthly Revenue</h2>
+      <img src="{{ url_for('static', filename='monthly_sales.png') }}" alt="Monthly Revenue Chart">
+    </div>
+  </div>
+</body>
+</html>
